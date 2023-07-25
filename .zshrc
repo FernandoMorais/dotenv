@@ -26,7 +26,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
@@ -101,18 +101,24 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export PATH=$PATH:/Users/nandomorais/bin
+
+eval $(/usr/libexec/path_helper -s)
+
+
+
+# >>>>> CUSTOM <<<<<
+[[ -f ~/.zsh/brew.zsh ]] && source ~/.zsh/brew.zsh
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
+[[ -f ~/.zsh/az.zsh ]] && source ~/.zsh/az.zsh
+[[ -f ~/.zsh/dotnet.zsh ]] && source ~/.zsh/dotnet.zsh
 [[ -f ~/.zsh/functions.zsh ]] && source ~/.zsh/functions.zsh
-[[ -f ~/.zsh/starship.zsh ]] && source ~/.zsh/starship.zsh
 [[ -f ~/.zsh/nvm.zsh ]] && source ~/.zsh/nvm.zsh
+[[ -f ~/.zsh/pulumi.zsh ]] && source ~/.zsh/pulumi.zsh
+[[ -f ~/.zsh/starship.zsh ]] && source ~/.zsh/starship.zsh
+#[[ -f ~/.zsh/tailscale.zsh ]] && source ~/.zsh/tailscale.zsh
 [[ -f ~/.zsh/wsl2fix.zsh ]] && source ~/.zsh/wsl2fix.zsh
 [[ -f ~/.zsh/goto.zsh ]] && source ~/.zsh/goto.zsh
-[[ -f ~/.zsh/dotnet.zsh ]] && source ~/.zsh/dotnet.zsh
-[[ -f ~/.zsh/pulumi.zsh ]] && source ~/.zsh/pulumi.zsh
-[[ -f ~/.zsh/az.zsh ]] && source ~/.zsh/az.zsh
-#[[ -f ~/.zsh/tailscale.zsh ]] && source ~/.zsh/tailscale.zsh
 
-# Load Starship
+# >>>>> STARSHIP <<<<<
 eval "$(starship init zsh)"
-
-export PATH=$PATH:/home/fdemorais/bin

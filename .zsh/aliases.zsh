@@ -30,7 +30,7 @@ gts-clean(){
     remote="${3:-origin}"
 
     to_clean=$(gts $tag)
-    to_remove=$(echo $to_clean |wc -l)
+    to_remove=$(echo $to_clean |wc -l |sed -e 's/^[[:space:]]*//')
 
     if [ "$to_clean" = "" ]; then
         to_remove=0
@@ -100,4 +100,8 @@ alias kuba="kubectl apply"
 alias kubaf="kubectl apply -f"
 alias kubd="kubectl delete"
 alias kubdf="kubectl delete -f"
+
+# HACKS
+alias hack_zoom_cam="sudo codesign --remove-signature /Applications/zoom.us.app/"
+alias hack_teams_cam="sudo codesign --remove-signature '/Applications/Microsoft Teams.app' && sudo codesign --remove-signature '/Applications/Microsoft Teams.app/Contents/Frameworks/Microsoft Teams Helper.app' && sudo codesign --remove-signature '/Applications/Microsoft Teams.app/Contents/Frameworks/Microsoft Teams Helper (GPU).app' && sudo codesign --remove-signature '/Applications/Microsoft Teams.app/Contents/Frameworks/Microsoft Teams Helper (Plugin).app' && sudo codesign --remove-signature '/Applications/Microsoft Teams.app/Contents/Frameworks/Microsoft Teams Helper (Renderer).app'"
 
