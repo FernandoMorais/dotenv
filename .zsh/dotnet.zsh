@@ -1,5 +1,5 @@
-export DOTNET_ROOT=$HOME/.dotnet
-export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
+export DOTNET_ROOT=/usr/local/share/dotnet
+export PATH=$PATH:$DOTNET_ROOT:$HOME/.dotnet/tools
 
 # zsh parameter completion for the dotnet CLI
 
