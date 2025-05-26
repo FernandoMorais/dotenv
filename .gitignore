@@ -9,6 +9,8 @@
 .CFUserTextEncoding
 .config/
 .cups/
+.cursor
+.cursor-server
 .docker/
 .dotnet/
 .DS_Store
@@ -43,6 +45,7 @@
 .viminfo
 .vscode/
 .vscode-server/
+.vscode-remote-containers
 .wget-hsts
 .yarnrc
 .zcompdump*
