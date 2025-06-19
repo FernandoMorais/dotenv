@@ -104,15 +104,18 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if [ -d /Users/nandomorais/bin ]; then
-    export PATH=$PATH:/Users/nandomorais/bin
-fi
+add_to_path() {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        export PATH=$PATH:$1
+    fi
+}
+
+add_to_path "/Users/${USER}/bin"
+add_to_path "/home/${USER}/.local/bin"
 
 if [ -f /usr/libexec/path_helper ]; then
     eval $(/usr/libexec/path_helper -s)
 fi
-
-
 
 # >>>>> CUSTOM <<<<<
 [[ -f ~/.zsh/brew.zsh ]] && source ~/.zsh/brew.zsh
