@@ -6,12 +6,15 @@
 .bash_history
 .bash_logout
 .cache/
+.cagent/
+.codex/
 .CFUserTextEncoding
 .config/
 .cups/
 .cursor
 .cursor-server
 .docker/
+.gsutil/
 .dotnet/
 .DS_Store
 .gem/
@@ -39,6 +42,8 @@
 .shell.pre-oh-my-zsh
 .skaffold/
 .ssh/
+.storybook/
+.terraform.d/
 .sudo_as_admin_successful
 .templateengine/
 .vagrant.d/
@@ -63,6 +68,7 @@ lib/
 Library/
 Movies/
 Music/
+nltk_data/
 OneDrive
 Parallels/
 Pictures/
@@ -71,3 +77,4 @@ Public/
 azure-pipelines-task-lib/
 getting-started/
 ws/
+.boto
