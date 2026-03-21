@@ -118,9 +118,10 @@ if [ -f /usr/libexec/path_helper ]; then
 fi
 
 # >>>>> CUSTOM <<<<<
-[[ -f ~/.zsh/brew.zsh ]] && source ~/.zsh/brew.zsh
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
 [[ -f ~/.zsh/az.zsh ]] && source ~/.zsh/az.zsh
+[[ -f ~/.zsh/brew.zsh ]] && source ~/.zsh/brew.zsh
+[[ -f ~/.zsh/direnv.zsh ]] && source ~/.zsh/direnv.zsh
 [[ -f ~/.zsh/dotnet.zsh ]] && source ~/.zsh/dotnet.zsh
 [[ -f ~/.zsh/functions.zsh ]] && source ~/.zsh/functions.zsh
 [[ -f ~/.zsh/nvm.zsh ]] && source ~/.zsh/nvm.zsh
